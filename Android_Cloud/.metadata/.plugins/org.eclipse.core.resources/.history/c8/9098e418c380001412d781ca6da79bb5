@@ -1,0 +1,205 @@
+package com.example.cloud218;
+
+import java.io.UnsupportedEncodingException;
+
+import org.apache.http.entity.StringEntity;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class LoginActivity extends ActionBarActivity {
+	
+	Button login_button;
+    Button register_button;
+    EditText email_edit;
+    EditText pword_edit;
+    private TextView loginErrMsg;
+    
+    private static String SUCCESS = "success";
+    private static String USERID = "userid";
+    private static String USERNAME = "username";
+    private static String ACCESS_TOKEN = "access_token";
+    private static String ERROR = "error";
+    
+   
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        
+        //initializing layout variables;
+        login_button = (Button) findViewById(R.id.login_button);
+        register_button = (Button) findViewById(R.id.register_button);
+        email_edit = (EditText) findViewById(R.id.email_edit);
+        pword_edit = (EditText) findViewById(R.id.pword_edit);
+        
+        
+        
+        //Clicking on register button will open Regster layout ; 
+       register_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent registerIntent = new Intent(LoginActivity.this, Registration.class);
+                startActivityForResult(registerIntent, 0);
+                finish();
+       }});
+    
+       //Clicking on login button will open Login layout ; 
+    
+	    login_button.setOnClickListener(new View.OnClickListener() {
+	
+	        public void onClick(View view) {
+	
+	            if (  ( !email_edit.getText().toString().equals("")) && ( !pword_edit.getText().toString().equals("")) )
+	            {	
+	            	//Run the request process in background if both email and password field not empty 
+	            	new processBackend().execute();
+	            }
+	            else if ( ( email_edit.getText().toString().equals("")) )
+	            {
+	            	Toast.makeText(getApplicationContext(),
+	                        "Email can not be empty", Toast.LENGTH_SHORT).show();
+	                
+	            }
+	            else if ( ( pword_edit.getText().toString().equals("")) )
+	            {
+	            	Toast.makeText(getApplicationContext(),
+	                        "Password can not be empty", Toast.LENGTH_SHORT).show();
+	            }
+	            else
+	            {
+	                Toast.makeText(getApplicationContext(),
+	                        "Email and Password field can not be  empty", Toast.LENGTH_SHORT).show();
+	            }
+	        }
+	    });
+	   }
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    
+    
+    //Inner private class to handle all network Request Response Activities
+    private class processBackend extends AsyncTask<String, String, JSONObject> {
+
+        String emailId, passWord, requestType;
+        requestType = "login";
+       @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+           
+            email_edit = (EditText) findViewById(R.id.email_edit);
+            pword_edit = (EditText) findViewById(R.id.pword_edit);
+            emailId = email_edit.getText().toString();
+            passWord = pword_edit.getText().toString();
+        }
+
+        @Override
+        protected JSONObject doInBackground(String... args) {
+           
+        	JSONObject jsonRequest = new JSONObject();
+
+            
+            try {
+            		jsonRequest.put("emailId", emailId);
+            		jsonRequest.put("passWord", passWord);
+            		jsonRequest.put("requestType", "login");
+            		
+            		StringEntity se = new StringEntity( jsonRequest.toString());
+            		jsonRequest = LibraryFunctions.createURL(requestType, se);
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+           
+            return jsonRequest;
+        }
+
+        @Override
+        protected void onPostExecute(JSONObject json) {
+        	loginErrMsg = (TextView) findViewById(R.id.loginErrMsg);
+        	
+        	try {
+        		Log.e("Response data ", json.toString());
+        		Log.e("success ", json.getString("success"));
+        		Log.e("error", json.getString("error") );
+        		
+        		//If we get success as 1 in response
+				if(json.getInt("success") == 1 && json.getInt("error") == 0 ) {
+					
+					try {
+						//USERNAME = json.getString("userName");
+						USERID = json.getString("userId");
+						ACCESS_TOKEN = json.getString("accessToken");
+						//Log.e("USERNAME ", USERNAME);
+						Log.e("ACCESS_TOKEN ", ACCESS_TOKEN);
+						Log.e("USERID ", USERID);
+						
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					Intent videoIntent = new Intent(LoginActivity.this, VideoActivity.class);
+					
+					//videoIntent.putExtra("userName",USERNAME );
+					videoIntent.putExtra("userId",USERID );
+					videoIntent.putExtra("accessToken",ACCESS_TOKEN );
+					
+					startActivity(videoIntent);
+					
+				}
+				
+				//If we get error as 1 in response
+				else if(json.getInt("success") == 0 && json.getInt("error") == 1){
+					String errorMsg = json.getString("errorMsg");
+					loginErrMsg.setText(errorMsg);
+					loginErrMsg.setVisibility(1);
+				}
+			} catch (JSONException e) {
+				Log.e("Activity_main, OnPostExecute ", "error in json");
+				e.printStackTrace();
+			}
+        	
+            
+       }
+    }
+    
+    
+}
+
+
