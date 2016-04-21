@@ -1,0 +1,1 @@
+var benignTotalComposite = {"totalWordsA":8193746,"totalWordsAB":8193746}

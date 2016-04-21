@@ -1,0 +1,1 @@
+var maliciousTotal = {"totalWordsA":98818200,"totalWordsAB":98818200}
