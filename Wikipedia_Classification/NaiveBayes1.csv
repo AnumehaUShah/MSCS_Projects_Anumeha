@@ -1,0 +1,4 @@
+Features,Correctly Classified,Incorrectly classified,Precision,Recall,F-Measure
+Training Data ,84.2105,12.11,92.6,86.2,89.3
+Training data doubled,87.77,12.22,92.6,86.2,89.3
+Training data tokenized,90.3333,9.674,90,100,94.7
