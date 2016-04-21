@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cloud218</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="WelcomeMessage">Cloud Application</string>
+    <string name="email_text">Email</string>
+    <string name="email_edit">Enter Email</string>
+    <string name="pword_text">Password</string>
+    <string name="pword_edit">Enter Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="register_welcome">Register</string>
+    <string name="fname_text">First Name</string>
+    <string name="fname_edit">First Name</string>
+    <string name="lname_text">Last Name</string>
+    <string name="lname_edit">Last Name</string>
+    <string name="email_text_register">Email</string>
+    <string name="email_edit_register">Enter Email</string>
+    <string name="pword_text_register">Password</string>
+    <string name="pword_edit_register">Enter Password</string>
+    <string name="login_view_button">Login</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="my_vid_btn">MY VIDEOS</string>
+    <string name="all_vid_btn">ALL VIDEOS</string>
+    <string name="captr_vid_btn">CAPTURE VIDEO</string>
+    <string name="del_vid_btn">DELETE VIDEO</string>
+    <string name="logout_btn">LOGOUT</string>
+    <string name="welcome_text">Welcome User</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="title_activity_media">MediaActivity</string>
+    <string name="question_text">Specify permission for the video</string>
+    <string name="private_button">Private</string>
+    <string name="public_button">Public</string>
+    <string name="title_activity_input">InputActivity</string>
+    <string name="title_activity_showmyallvideos">Showmyallvideos</string>
+    <string name="title_activity_video_view_demo">VideoViewDemo</string>
+    <string name="title_activity_refresh_token">RefreshTokenActivity</string>
+
+</resources>
