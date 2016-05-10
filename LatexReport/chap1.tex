@@ -1,0 +1,196 @@
+\chapter{Introduction}
+\iffalse
+
+\LaTeX\ can be viewed
+as a compiled programming language, in contrast to that 
+nightmare known as Microsoft Word,
+which can be viewed as an interpreted language. So, to typeset a
+document in \LaTeX, you create a text file that has the {\tt .tex} extension.
+This file includes some special
+commands, known as macros. Then
+you compile your {\tt .tex} file by running  \LaTeX,
+which produces your typeset document, as a pdf. 
+
+In this paper, a few basics are discussed. There are plenty of good online resource
+if you need help with more advanced topics.
+\fi
+
+JavaScript and its frameworks have been a popular choice among web developers for building web pages. JavaScript can be placed in the HTML of web pages and can interface with the document object model of the page, thus providing extensive functionalities such as form validation, animation, asynchronous behavior, user activity tracking, interactivity, and more. JavaScript is now progressively being used in server side code and in mobile applications by using cross-platform development tools like Titanium and PhoneGap ~\cite{g10}. 
+
+Since the release of JavaScript in 1995, there have been many browsers and client-side security issues which have gained widespread attention ~\cite{g9}. JavaScript's capability to interact with the page's document object model makes it powerful, but at the same time, it also opens doors for attackers who can enable malicious actors to deliver scripts over the web and run them on client computers. Malicious JavaScript has been listed in the Open Web Application Security Project (OWASP)'s 2013 Top 10 List of security issues ~\cite{g2}. Cross-site scripting has been listed as the 3rd most widespread web application vulnerabilities on the Internet. Malicious JavaScript payload can be embedded into a legitimate website or web application by an attacker and can be executed on a client's machine. Several security measures have been taken to restrict the malicious code in order to access the client side sensitive information, the malicious JavaScript has access to the same objects as web pages and includes the user's cookies, sessions, etc. The malicious code can also redirect a user to an attacker's website and execute some malicious code without the user's permission, further advancing the attack to more severe ones.
+
+One approach to solving this problem is to identify the pages that contain malicious scripts and either warn users before loading the page or block those scripts. Altogether the problem arises is how to classify malicious scripts from the benign ones accurately, as the dynamic nature of JavaScript makes it difficult to detect the exploit code. Moreover, the attackers utilize sophisticated obfuscation techniques that hide the malicious code and make detection complicated.
+
+Recent work involoves using machine learning techniques in combination with de-obfuscation/emulation technology ~\cite{g1}. Machine learning is used for feature extraction to identify the nature the scripts. The malicious code keeps evolving, taking benefits of the dynamic feature of JavaScript and sophisticated browser functionality. However, they still need primitive JavaScript operations to be converted to clear text before execution [9]. A machine learning combined with de-obfuscation/emulation has proved to be advantageous, but they need a customized browser ~\cite{g1}. 
+ 
+\section{Our approach to the problem}
+
+Our approach is based on TARDIS ~\cite{g1}. TARDIS only requires the source code and does not utilize any de-obfuscation techniques on the original source code. TARDIS is simple yet achieves high accuracy compared to related research TARDIS ~\cite{g1}. TARDIS uses machine learning techniques and robust features. These robust features can classify the malicious code with a high degree of accuracy. An attempt to conceal these features in the malicious code will require modifications in the code generation algorithm, which further necessitates the use of additional resources from the attacker's part.
+
+The intuition on which TARDIS is based is the difference in the utilization of the JavaScript language for writing a benign program versus writing a malicious one. An attacker writing malicious code attempts to conceal what the code is doing using various automated or manual procedures and involves the use of regular expressions, rules, or machine learning. A malicious program is more likely to include more redundant parts as compared to a benign program. A benign, but inadequately written JavaScript program may also include redundancy and inefficiency. However, an attacker's intention of bypassing the detection of the exploit and the use of automation to generate obfuscated script tend to include added redundancy and inefficiency as compared to a benign and inefficient JavaScript program. TARDIS makes use of this difference. Furthermore, the features have been extended with a Statistical Language Model (SLM). SLM is termed as a probability distribution(s) of String S and estimates the frequency of a String S in a sentence ~\cite{g11}. SLM uses the general patterns in the language used in both malicious and benign JavaScript to classify benign and malicious JavaScript ~\cite{g1}.
+
+\section{Firefox add-on}
+
+We have developed a Firefox add-on based on TARDIS. Once added to the browser, this add-on is capable of capturing the inline JavaScript from the current open tab. It then extracts the required features, performs analysis, and identifies the existence of an exploit. On detection of malicious JavaScript, the Firefox add-on alerts the user of the presence of an exploit in the current tab 
+
+Our Firefox add-on uses a precompiled training model in order to perform an efficient prediction. The precompiled training model has been stored in JSON. JSON is lightweight and allows a quick search. The training model has been computed over 15000 malicious and 30000 benign JavaScript files, and the model has been tested using more than 1000 malicious and 1000 benign JavaScript files. A 10-fold cross-validation has been performed in order to validate the model. The model tends to reach 98\% accuracy.
+
+The remaining of the paper is organized as follows. In Chapter 2 we provide background information on SLM, XSS, and discuss TARDIS and other related work. Chapter 3 presents the Firefox add-on development and pre-compiled training model and similar security research by top companies and universities. In Chapter 4 we provide test results and accuracy of the training model, and Chapter 5 covers the conclusion. tradeoffs, and future work.
+
+\iffalse
+This paper concentrates on properly handling exceptions
+with faceted approach. Chapter 2 describes some background information on types of
+information flow analysis and also shows some of the JavaScript attacks. Chapter 3
+gives an introduction on basic faceted evaluation, its semantics followed by some of the
+scenarios where there is a need to handle exceptions and a theoretical explanation
+of handling exceptions using the language constructs defined in earlier paper [7].
+Chapter 4 and 5 takes you through the implementation part of the project with some
+of the examples from real time scenarios and how the new feature has been embedded
+into Mozilla Firefox browser. Chapter 6 compares the performance of faceted value
+implementation to that of Secure-Multi execution and chapter 7 gives the conclusion.
+
+
+Typesetting text is generally pretty easy. However, there are some special
+characters that will not be typeset as you might expect. In the remainder of this
+section we consider some of the most common of these
+special characters. 
+
+The backslash ``\verb+\+'' is used 
+as the ``escape'' character, meaning that
+whatever follows a backslash is interpreted as a macro.
+For example, when \verb+\LaTeX+ is typeset, it looks like \LaTeX, which 
+is a lot different from LaTeX.
+
+To get double quotes, use two single quotes. That is, the left double quote is ``, while the right double
+quote is ''. When you do it correctly, quoted text looks ``like this.''
+If you use the double quote key, you will always get right-quotes, which looks "like this," and is
+almost certainly not what you want.
+
+A tilde ``\verb+~+'' is used as a ``tie,'' that is, a space is inserted, but no line break can occur.
+For example, you might type Dr.~Stamp just to be sure that the line of text
+does not break between Dr. and Stamp, as it otherwise might.
+
+The percent sign is used for comments---everything following a percent sign 
+on a given line is ignored when you \LaTeX\ your file. % Like this stuff here
+If you want a percent sign to appear in your document, use \verb+\%+, 
+which will give you this \%.
+
+The dollar sign also has special meaning, since it is used to start and end
+math formulas. To typeset a dollar sign, use \verb+\$+, like this~\$.
+
+To force \LaTeX\ to insert a space, use a backslash followed by
+a space, that is, \verb+\ +. You can put in multiple extra spaces\ \ \ \ \ \ \ if you want.
+
+\section{Fonts}
+
+To change fonts, enclose the text in curly brackets and give the appropriate font command.
+For example, to italicize text, {\it do this}, and to get boldface, {\bf this is the ticket}.
+Another useful font is {\tt this one}, which produces a typewriter-like font.
+
+
+\section{Math Basics}
+
+Math typesetting is a big, big, big topic---here we just cover some of
+the most basic issues. For more information, look online.
+
+The dollar sign is used to start and end math formulas, like~$\pi r^2$.
+If you want your formula displayed on a line by itself, then double
+dollar signs
+$$
+  d(X,Y) =  \sum_{i,j} |x_{ij} - y_{ij}| 
+$$
+are your friend.
+
+In math formulas, text gets typeset as math symbols. To
+insert regular text in a math formula, you can use the \verb+\mbox+
+command. Here is an example of a displayed equation with text
+$$
+  {n\choose 26} 26!\;  26^{n-26} < 26^n \approx 2^{4.7n} \mbox{ is a pretty formula} .
+$$ 
+
+
+\subsection{Numbered Equations}
+
+One of the most useful features of \LaTeX\ is its symbolic cross-references.
+What this means is that you can give names to equations, figures, tables, citations, etc., and
+refer to those equations, figures, tables, citations, etc., by their names. Then when you \LaTeX\
+the document, the correct numbers will magically appear in place of the
+names. This is very convenient when you move things around or you insert or delete
+stuff. You should definitely use this feature as much as possible.
+
+In this section, we discuss numbered equations, Then in Chapter~\ref{chap:blah}
+we consider other examples of symbolic cross-referencing.
+Again, this is a feature you should use, since it will save
+you a lot of time in the long run.
+
+To typeset a displayed equation with a number, you can 
+use \verb+\begin{equation}+ to begin the equation, and \verb+\end{equation}+
+to end the equation. You also want to provide a label for the equation.
+For example,
+\begin{equation}\label{eq:swaps}
+  \sum_{i = 1}^{26} m_i \bigg( n - \sum_{j=1}^i m_j \bigg) 
+    = n^2 - \sum_{i = 1}^{26} m_i  \sum_{j=1}^i m_j = \sum_{i=1}^{25} \sum_{j=i+1}^{26} m_i m_j 
+\end{equation}
+gives us a numbered equation. 
+
+Note that labels can be used for
+just about anything that is numbered. Generally, to refer to a label,
+we use \verb+\ref{label}+, but for equations, you probably want to use
+\verb+\eref{label}+, since that will put parenthesis around the number.
+
+So, we can now refer to equation~\eref{eq:swaps} anywhere in the paper.
+Better yet, if we move, insert, or delete text, the numbering will still be correct.
+
+
+\subsection{Last Word on Equations}
+
+Again, typesetting equations is a big topic and we have only given the most basic
+of basics here. Just remember that almost anything is possible, and there
+are plenty of good resources available. 
+
+
+\section{Lists}
+
+Numbered lists are not difficult. Here is an example
+of a numbered list:
+\begin{enumerate}
+\item Let $\mbox{\tt score} = \infty$
+\item Construct an initial {\tt putativeKey} 
+\item Parse the ciphertext using {\tt putativeKey}
+\item Compute {\tt newScore} based on the resulting putative plaintext
+\item If $\mbox{\tt newScore} < \mbox{\tt score}$ then 
+let $\mbox{\tt key} = \mbox{\tt putativeKey}$ and $\mbox{\tt score} = \mbox{\tt newScore}$
+\item Modify {\tt key} to obtain a new {\tt putativeKey}
+\item Goto~3
+\end{enumerate}
+
+Bulleted lists are similar to numbered lists. Here is an example of a bulleted list:
+\begin{itemize}
+\item How can we determine an initial putative key?
+\item  How can we systematically modify the key?
+\item Given a putative key, how can we compute a score?
+\end{itemize}
+
+
+\section{Verbatim}
+
+To force \LaTeX\ to typeset exactly what you type, you might want to use the \verb+\verb+
+macro. Here is an example:
+\verb+four score    and seven+. Note that everything between the ``+'' signs
+is typeset as it appears. 
+
+If you happen to have a lot of verbatim text, you can use the verbatim environment,
+like this:
+
+\begin{verbatim}
+Four score
+and seven
+years
+ago.........
+\end{verbatim}
+
+Generally, verbatim should be used sparingly, if at all. But, since
+verbatim text has already appeared several times in this document, I thought it
+should be explained.
+
+\fi

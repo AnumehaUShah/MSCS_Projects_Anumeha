@@ -1,0 +1,65 @@
+\select@language {british}
+{\vskip 1.0ex plus\p@ {\bfseries \noindent Chapter\hfill }}
+ 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}\hspace {-1.7em}Our approach to the problem}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}\hspace {-1.7em}Firefox add-on}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}\hspace {-1.7em}Cross site scripting (XSS)}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}\hspace {-1.7em}Stored Cross Site Scripting}{6}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}\hspace {-1.7em}Reflected cross-site scripting}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}\hspace {-1.7em}DOM based XSS Attack}{8}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}\hspace {-1.7em}Other variants of JavaScript Attack}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}\hspace {-1.7em}Security measures adopted to prevent malicious JavaScript Attack}{11}{section.2.3}
+\contentsline {section}{\numberline {2.4}\hspace {-1.7em}Static Analysis}{12}{section.2.4}
+\contentsline {section}{\numberline {2.5}\hspace {-1.7em}Dynamic Analysis}{12}{section.2.5}
+\contentsline {section}{\numberline {2.6}\hspace {-1.7em}Related Work}{13}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}\hspace {-1.7em}JStill (Mostly Static Approach) ~\cite {g6}}{13}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}\hspace {-1.7em}Zozzle: Fast and Precise In-Browser JavaScript Malware Detection ~\cite {g24}}{14}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}\hspace {-1.7em}Cujo: efficient detection and prevention of drive-by-download attacks ~\cite {g23}}{14}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}\hspace {-1.7em}IceShield: Detection and Mitigation of Malicious Websites with a Frozen DOM ~\cite {g25}}{15}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}\hspace {-1.7em}EarlyBird: Early Detection of Malicious Behavior in JavaScript Code ~\cite {g25}}{15}{subsection.2.6.5}
+\contentsline {subsection}{\numberline {2.6.6}\hspace {-1.7em}Wepawet ~\cite {g8}}{16}{subsection.2.6.6}
+\contentsline {subsection}{\numberline {2.6.7}\hspace {-1.7em}PJScan: Static Detection of Malicious JavaScript-Bearing PDF Documents ~\cite {g4}}{16}{subsection.2.6.7}
+\contentsline {subsection}{\numberline {2.6.8}\hspace {-1.7em}Prophiler: A Fast Filter for the Large-Scale Detection of Malicious Web Pages ~\cite {g16}}{17}{subsection.2.6.8}
+\contentsline {section}{\numberline {2.7}\hspace {-1.7em}TARDIS}{21}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}\hspace {-1.7em}Abstract syntax tree}{22}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}\hspace {-1.7em}Statistical Language Modeling (SLM) ~\cite {g11}}{22}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}\hspace {-1.7em}TARDIS SLM model}{23}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}\hspace {-1.7em}N-grams SLM model}{23}{subsection.2.7.4}
+\contentsline {subsection}{\numberline {2.7.5}\hspace {-1.7em}Character level n-grams}{24}{subsection.2.7.5}
+\contentsline {subsection}{\numberline {2.7.6}\hspace {-1.7em}Keyword Transformation}{25}{subsection.2.7.6}
+\contentsline {subsection}{\numberline {2.7.7}\hspace {-1.7em}Composite word-type transformation}{26}{subsection.2.7.7}
+\contentsline {section}{\numberline {2.8}\hspace {-1.7em}Malicious Probability Query Strategy}{27}{section.2.8}
+\contentsline {chapter}{\numberline {3}Firefox add-on Implementation }{28}{chapter.3}
+\contentsline {section}{\numberline {3.1}\hspace {-1.7em}Usability of our Firefox add-on}{28}{section.3.1}
+\contentsline {section}{\numberline {3.2}\hspace {-1.7em}Developing a Firefox add-on}{28}{section.3.2}
+\contentsline {section}{\numberline {3.3}\hspace {-1.7em}WebExtensions }{29}{section.3.3}
+\contentsline {section}{\numberline {3.4}\hspace {-1.7em}Add-on SDK}{29}{section.3.4}
+\contentsline {section}{\numberline {3.5}\hspace {-1.7em}Firefox Add-on SDK installation and structure}{29}{section.3.5}
+\contentsline {section}{\numberline {3.6}\hspace {-1.7em}index.js}{30}{section.3.6}
+\contentsline {section}{\numberline {3.7}\hspace {-1.7em}Content scripts}{31}{section.3.7}
+\contentsline {section}{\numberline {3.8}\hspace {-1.7em}Data Directory}{32}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}\hspace {-1.7em}SLM\_Script.js}{34}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}\hspace {-1.7em}Models}{34}{subsection.3.8.2}
+\contentsline {section}{\numberline {3.9}\hspace {-1.7em}Pre-compiled training model}{35}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}\hspace {-1.7em}Types of pre-compiled models}{35}{subsection.3.9.1}
+\contentsline {subsection}{\numberline {3.9.2}\hspace {-1.7em}Character level n-gram model}{36}{subsection.3.9.2}
+\contentsline {subsection}{\numberline {3.9.3}\hspace {-1.7em}Keyword transformation}{37}{subsection.3.9.3}
+\contentsline {subsection}{\numberline {3.9.4}\hspace {-1.7em}Composite word type transformation}{38}{subsection.3.9.4}
+\contentsline {subsection}{\numberline {3.9.5}\hspace {-1.7em}Precompiled training models computation}{39}{subsection.3.9.5}
+\contentsline {subsection}{\numberline {3.9.6}\hspace {-1.7em}Problems faced during pre-compiled model generation and solution implementation}{40}{subsection.3.9.6}
+\contentsline {section}{\numberline {3.10}\hspace {-1.7em}Result Computation}{42}{section.3.10}
+\contentsline {chapter}{\numberline {4}Testing}{43}{chapter.4}
+\contentsline {section}{\numberline {4.1}\hspace {-1.7em}Dataset}{43}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}\hspace {-1.7em}Malicious scripts}{43}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}\hspace {-1.7em}Benign Scripts}{43}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}\hspace {-1.7em}Problems with the scripts}{44}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}\hspace {-1.7em}Training models}{44}{section.4.2}
+\contentsline {section}{\numberline {4.3}\hspace {-1.7em}Evaluation of n-grams models}{44}{section.4.3}
+{\vskip 1.0ex plus\p@ {\bfseries \noindent APPENDIX \hfill }}
+ 
+\contentsline {chapter}{\numberline {A}Zorak Likes Beans}{45}{appendix.A}
+\contentsline {section}{\numberline {A.1}\hspace {-1.7em}Oh Yes He Does}{45}{section.A.1}
+\contentsline {section}{\numberline {A.2}\hspace {-1.7em}Really}{45}{section.A.2}
+\contentsline {chapter}{\numberline {B}Everybody Wants to Be Space Ghost}{46}{appendix.B}

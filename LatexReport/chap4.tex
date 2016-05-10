@@ -1,0 +1,34 @@
+\chapter{Testing}
+
+\section{Dataset}
+
+We have obtained dataset for our model computation from different sources. We have collected a significant amount of both malicious and benign scripts to train our model, and we have made the effort to include various types of malicious scripts such as redirection, obfuscation, etc. For benign scripts set, we have also considered minified obfuscated benign scripts.
+
+\subsection{Malicious scripts}
+
+we have collected over 50000 of malicious scripts from EJ Jung et al. and the research team from the University of San Francisco. To train our model, we are utilizing 15000 of malicious datasets of a size of total 200 megabytes. Half of the malicious scripts is of type redirection, and other half represents all the other forms of attack.
+
+\subsection{Benign Scripts}
+
+We have collected the benign scripts from various resources on the internet. We have obtained over 27000 of benign files of total size equal to 200 megabytes. These files represent both clear and obfuscated benign scripts. Most of the benign files are from the JavaScript libraries such as React.js, MooTools, JQuery, D3.js, Processing.js, etc.
+
+\subsection{Problems with the scripts}
+
+In out dataset, it has been observed that malicious script size is commonly bigger than the benign script size. To match the different size, we are using maximum 15000 files for malicious model computation and over 30000 for benign model computation. We have also made sure that that both the models are of equal size to avoid over-fitting. 
+
+\section{Training models}
+
+We are testing the add-on for various size of the models.  We have observed that while calculating models if we optimize the model and don?t consider the n-grams with the frequency less than 10, the model size gets reduced significantly. However, this reduction in size may incur a loss in accuracy. We have tested the add-on for both optimized and non-optimized version of each type of transformation. We are capturing accuracy and detection time with the different size of the models of each category to identify the maximum size of the training model that the add-on can utilize without sacrificing the performance. 
+
+We have computed benign and malicious models for a total file size of 50 megabytes for all the three kinds of transformation: character level n-gram, keyword transformation, and composite word type transformation.  A detailed description of these transformation can be found in section \ref{n-grams}. 
+
+\section{Evaluation of n-grams models}
+
+We have evaluated all the three models for accuracy and performance. This section describes in details the performance and accuracy trade-off in between the models.
+
+
+
+
+
+
+

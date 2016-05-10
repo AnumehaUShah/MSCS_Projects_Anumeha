@@ -1,0 +1,203 @@
+%
+%
+% ***** used to mark places where you need to make changes in this file
+%
+% Abstract, acknowledgements, chapters, appendices, and references are in separate tex files
+%
+%
+\documentclass[oneref]{urithesis}
+\usepackage{amsmath,amsthm, amsfonts, amssymb, amsxtra,amsopn}
+\usepackage{graphicx}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{multirow}
+\usepackage{alltt}
+\usepackage{algorithmic}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage[tableposition=top]{caption}
+\usepackage{float}
+%\usepackage{epstopdf}
+%from here
+\usepackage{url}
+%todayyyyyyyyyyyyyyyyyyyyyyy
+%\usepackage[margin=1in]{geometry}
+%\usepackage[demo]{graphicx}
+
+
+%today endddddddd
+\usepackage[utf8]{inputenc}
+ 
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    %backgroundcolor=\color{backcolour},   
+    frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle={\small\ttfamily},
+    breakatwhitespace=true,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,
+    breakatwhitespace=true,
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=3
+}
+ 
+\lstset{style=mystyle}
+%till here
+%\documentclass[9pt]{scrartcl}
+%\usepackage[british]{babel}
+%\usepackage{hhline}
+%\usepackage{multirow}
+\usepackage[T1]{fontenc}
+\usepackage[tableposition=top]{caption}
+\usepackage{caption}
+% Top=1.25 inches - 0.05 inches for the header.
+%
+%\usepackage[total={6.0in, 8.5in}, 
+%            top=1.25in, left=1.5in]{geometry}
+\usepackage[vmargin={1.25in, 1.25in}, hmargin={1.5in, 1in},
+            textwidth=6in,
+            textheight=5.25in]{geometry}
+            
+\usepackage{hyperref}
+%hyperref to make index clickable
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\usepackage[british]{babel}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage{changepage}
+%\usepackage[showframe=false]{geometry}
+
+
+%\lstnewenvironment{code}[1][]%
+%  {\noindent\minipage{\linewidth}\medskip 
+%   \lstset{basicstyle=\ttfamily\footnotesize,frame=single,#1}}
+%  {\endminipage}
+
+% no limit on percentage of floats per page
+\renewcommand{\floatpagefraction}{1.0}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+
+
+\def\eref#1{(\ref{#1})}
+
+%
+% ***** project type: For CS 298 use "\projectType{Project}" and for CS 299 use "\projectType{Thesis}"
+%
+%\def\projectType{Thesis}
+\def\projectType{Project}
+%
+% ***** graduation month
+%
+\def\graduationMonth{May}
+%
+% ***** advisor's name
+%
+\def\advisorName{Dr. Thomas Austin}
+\def\advisorAffiliation{Department of Computer Science}
+%
+% ***** first committee member's name
+%
+\def\firstCommitteeMember{Dr. Chris Pollett}
+\def\firstCommitteeMemberAffiliation{Department of Computer Science}
+%
+% ***** second committee member's name
+%
+\def\secondCommitteeMember{Dr. Jon Pearce}
+\def\secondCommitteeMemberAffiliation{Department of Mathematics}
+
+\setcounter{secnumdepth}{3}
+
+\begin{document}
+
+%
+% ***** title
+%
+\title{Malicious JavaScript Detection using Statistical Language Model}
+
+%
+% ***** author's name
+%
+\author{Anumeha Shah}
+%
+% ***** graduation year
+%
+\copyrightyear{2016}
+
+%
+% Do not change this...
+%
+\ifthenelse{\equal{\projectType}{Thesis}}
+           {\raggedright \parindent=30pt}
+           {}
+
+\pagestyle{empty}
+
+%
+% ***** abstract is file abs.tex
+%
+\abstract{abs}
+
+%
+% ***** acknowledgements in file ack.tex
+%
+\acknowledgements{ack}
+
+\setlength{\parskip}{.1 in}
+%uncomment the following for single space drafts
+%\singlespace
+\doublespace
+\pagenumbering{arabic}
+
+\setcounter{page}{0}
+
+%
+% ***** chapters in files chap1.tex, chap2.tex, and so on
+%
+\newchapter{chap1}
+\newchapter{chap2}
+\newchapter{chap3}
+\newchapter{chap4}
+
+%
+% ***** bibliography/references in file bib.tex
+%
+%\input bib.tex
+
+%
+% ***** appendices in appA.tex, appB.tex, ...
+%
+\newappendix{appA}
+\newappendix{appB}
+\bibliographystyle{plain}
+\bibliography{urlbib}
+
+\end{document}

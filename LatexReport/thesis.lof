@@ -1,0 +1,31 @@
+\select@language {british}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 1}{\ignorespaces Stored cross-site scripting attack}}{6}{figure.caption.5}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 2}{\ignorespaces Reflected cross-site scripting attack}}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 3}{\ignorespaces DOM based cross-site scripting attack}}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 4}{\ignorespaces DOM based cross-site scripting attack example }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 5}{\ignorespaces DOM based cross-site scripting attack example}}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 6}{\ignorespaces HTML page with embedded malicious JavaScript}}{9}{figure.caption.10}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 7}{\ignorespaces Cross-site request frogery attack}}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 8}{\ignorespaces Malicious request forged by the attacker}}{10}{figure.caption.12}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 9}{\ignorespaces Benign script sample}}{18}{figure.caption.13}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 10}{\ignorespaces Malicious script sample}}{19}{figure.caption.14}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 11}{\ignorespaces Obfuscated script sample}}{20}{figure.caption.15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 12}{\ignorespaces Initial directory structure of the Firefox add-on}}{30}{figure.caption.16}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 13}{\ignorespaces Index.js}}{30}{figure.caption.17}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 14}{\ignorespaces function runScript.js}}{31}{figure.caption.18}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 15}{\ignorespaces Add-on directory structure}}{33}{figure.caption.19}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 16}{\ignorespaces Example of port.emit}}{34}{figure.caption.20}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 17}{\ignorespaces A snapshot of a pre-compiled malicious character level n-grams model}}{36}{figure.caption.21}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 18}{\ignorespaces a snapshot of a keyword transformation n-grams model}}{37}{figure.caption.22}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 19}{\ignorespaces A snapshot of the malicious n-grams composite word type transformation model }}{38}{figure.caption.23}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 20}{\ignorespaces Java code added for model computation }}{39}{figure.caption.24}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 21}{\ignorespaces CPU utilization before multithreading implementation}}{40}{figure.caption.25}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 22}{\ignorespaces CPU idle time before multithreading implementation}}{40}{figure.caption.26}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 23}{\ignorespaces CPU utilization after multithreading implementation}}{41}{figure.caption.27}
+\contentsline {figure}{\numberline {\global \advance \c@totalfigurecount 1\relax 24}{\ignorespaces CPU idle time after multithreading implementation}}{41}{figure.caption.28}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -1,0 +1,60 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Our approach to the problem}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Firefox add-on}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Cross site scripting \(XSS\)}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.1.1}{Stored Cross Site Scripting}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.2}{Reflected cross-site scripting}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.3}{DOM based XSS Attack}{section.2.1}% 8
+\BOOKMARK [1][-]{section.2.2}{Other variants of JavaScript Attack}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Security measures adopted to prevent malicious JavaScript Attack}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Static Analysis}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.5}{Dynamic Analysis}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.6}{Related Work}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.6.1}{JStill \(Mostly Static Approach\) \040g6}{section.2.6}% 14
+\BOOKMARK [2][-]{subsection.2.6.2}{Zozzle: Fast and Precise In-Browser JavaScript Malware Detection \040g24}{section.2.6}% 15
+\BOOKMARK [2][-]{subsection.2.6.3}{Cujo: efficient detection and prevention of drive-by-download attacks \040g23}{section.2.6}% 16
+\BOOKMARK [2][-]{subsection.2.6.4}{IceShield: Detection and Mitigation of Malicious Websites with a Frozen DOM \040g25}{section.2.6}% 17
+\BOOKMARK [2][-]{subsection.2.6.5}{EarlyBird: Early Detection of Malicious Behavior in JavaScript Code \040g25}{section.2.6}% 18
+\BOOKMARK [2][-]{subsection.2.6.6}{Wepawet \040g8}{section.2.6}% 19
+\BOOKMARK [2][-]{subsection.2.6.7}{PJScan: Static Detection of Malicious JavaScript-Bearing PDF Documents \040g4}{section.2.6}% 20
+\BOOKMARK [2][-]{subsection.2.6.8}{Prophiler: A Fast Filter for the Large-Scale Detection of Malicious Web Pages \040g16}{section.2.6}% 21
+\BOOKMARK [1][-]{section.2.7}{TARDIS}{chapter.2}% 22
+\BOOKMARK [2][-]{subsection.2.7.1}{Abstract syntax tree}{section.2.7}% 23
+\BOOKMARK [2][-]{subsection.2.7.2}{Statistical Language Modeling \(SLM\) \040g11}{section.2.7}% 24
+\BOOKMARK [2][-]{subsection.2.7.3}{TARDIS SLM model}{section.2.7}% 25
+\BOOKMARK [2][-]{subsection.2.7.4}{N-grams SLM model}{section.2.7}% 26
+\BOOKMARK [2][-]{subsection.2.7.5}{Character level n-grams}{section.2.7}% 27
+\BOOKMARK [2][-]{subsection.2.7.6}{Keyword Transformation}{section.2.7}% 28
+\BOOKMARK [2][-]{subsection.2.7.7}{Composite word-type transformation}{section.2.7}% 29
+\BOOKMARK [1][-]{section.2.8}{Malicious Probability Query Strategy}{chapter.2}% 30
+\BOOKMARK [0][-]{chapter.3}{Firefox add-on Implementation }{}% 31
+\BOOKMARK [1][-]{section.3.1}{Usability of our Firefox add-on}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.2}{Developing a Firefox add-on}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.3}{WebExtensions }{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.4}{Add-on SDK}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.5}{Firefox Add-on SDK installation and structure}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.6}{index.js}{chapter.3}% 37
+\BOOKMARK [1][-]{section.3.7}{Content scripts}{chapter.3}% 38
+\BOOKMARK [1][-]{section.3.8}{Data Directory}{chapter.3}% 39
+\BOOKMARK [2][-]{subsection.3.8.1}{SLM\137Script.js}{section.3.8}% 40
+\BOOKMARK [2][-]{subsection.3.8.2}{Models}{section.3.8}% 41
+\BOOKMARK [1][-]{section.3.9}{Pre-compiled training model}{chapter.3}% 42
+\BOOKMARK [2][-]{subsection.3.9.1}{Types of pre-compiled models}{section.3.9}% 43
+\BOOKMARK [2][-]{subsection.3.9.2}{Character level n-gram model}{section.3.9}% 44
+\BOOKMARK [2][-]{subsection.3.9.3}{Keyword transformation}{section.3.9}% 45
+\BOOKMARK [2][-]{subsection.3.9.4}{Composite word type transformation}{section.3.9}% 46
+\BOOKMARK [2][-]{subsection.3.9.5}{Precompiled training models computation}{section.3.9}% 47
+\BOOKMARK [2][-]{subsection.3.9.6}{Problems faced during pre-compiled model generation and solution implementation}{section.3.9}% 48
+\BOOKMARK [1][-]{section.3.10}{Result Computation}{chapter.3}% 49
+\BOOKMARK [0][-]{chapter.4}{Testing}{}% 50
+\BOOKMARK [1][-]{section.4.1}{Dataset}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.1.1}{Malicious scripts}{section.4.1}% 52
+\BOOKMARK [2][-]{subsection.4.1.2}{Benign Scripts}{section.4.1}% 53
+\BOOKMARK [2][-]{subsection.4.1.3}{Problems with the scripts}{section.4.1}% 54
+\BOOKMARK [1][-]{section.4.2}{Training models}{chapter.4}% 55
+\BOOKMARK [1][-]{section.4.3}{Evaluation of n-grams models}{chapter.4}% 56
+\BOOKMARK [0][-]{appendix.A}{Zorak Likes Beans}{}% 57
+\BOOKMARK [1][-]{section.A.1}{Oh Yes He Does}{appendix.A}% 58
+\BOOKMARK [1][-]{section.A.2}{Really}{appendix.A}% 59
+\BOOKMARK [0][-]{appendix.B}{Everybody Wants to Be Space Ghost}{}% 60
